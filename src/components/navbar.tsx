@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Menu, X } from "lucide-react"
+import { Menu, User, X } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -41,9 +41,16 @@ export function Navbar() {
     <>
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 text-lg sm:text-xl font-semibold hover:opacity-80 transition-opacity">
-            Patrick U. AGWU
+         {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 hover:opacity-80 transition-opacity group">
+            <div className="flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+              <User className="h-4 w-4 text-primary" />
+            </div>
+            <div className="hidden sm:block">
+              <div className="text-lg font-semibold">Patrick U. AGWU</div>
+              <div className="text-xs text-muted-foreground -mt-1">Library Technology Specialist</div>
+            </div>
+            <div className="sm:hidden text-lg font-semibold">P. AGWU</div>
           </Link>
 
           {/* Desktop Navigation */}
