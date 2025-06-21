@@ -123,7 +123,7 @@ export default function AboutPage() {
             <div className="relative order-1 lg:order-2">
               <div className="aspect-square overflow-hidden rounded-lg bg-muted max-w-sm mx-auto lg:max-w-none">
                 <Image
-                  src="/MrP.jpeg"
+                  src="/pat.jpg"
                   alt="Patrick Uzodimma AGWU"
                   width={400}
                   height={400}
